@@ -41,25 +41,6 @@ pip install numpy pandas scipy matplotlib seaborn jupyter sqlalchemy scikit-lear
 jupyter-notebook .
 ```
 
-# Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Edutech
-
-## Business Understanding
-
-Latar BelakangJaya Jaya Institut mengalami permasalahan jumlah dropout mahasiswa yang cukup tinggi. Hal ini berdampak pada reputasi lembaga, efisiensi anggaran, dan kualitas lulusan.
-
-### Permasalahan Bisnis
-
-Fitur apa yang paling mempengaruhi risiko dropout?
-
-Siapa mahasiswa yang harus diprioritaskan intervensinya?
-
-Bagaimana estimasi risiko dropout per mahasiswa?
-
-### Cakupan Proyek
-
-Membuat model prediksi untuk mendeteksi mahasiswa yang berisiko dropout agar intervensi akademik bisa dilakukan lebih awal.
-
-
 ## Menjalankan Sistem Machine Learning
 Berikut langkah-langkah untuk menjalankan prototipe sistem deteksi risiko dropout mahasiswa yang telah dikembangkan:
 
@@ -97,25 +78,21 @@ Model memanfaatkan kombinasi fitur akademik (seperti rata-rata nilai semester da
 - Probabilitas untuk masing-masing label
 - Rekomendasi intervensi untuk institusi
 
-Faktor-Faktor yang Berpengaruh terhadap Dropout:
+### Faktor-Faktor yang Berpengaruh terhadap Dropout:
 
 - Average Grade: Mahasiswa dengan nilai rata-rata rendah memiliki risiko dropout yang jauh lebih tinggi. Ini adalah indikator kinerja akademik utama.
-
 - Curricular Units Failed: Semakin banyak mata kuliah yang gagal, semakin besar kemungkinan mahasiswa tersebut akan dropout.
-
 - Age at Enrollment: Mahasiswa yang masuk kuliah di usia lebih tua dari rata-rata juga lebih berisiko.
 
-Karakteristik Mahasiswa yang Rentan Dropout:
+### Karakteristik Mahasiswa yang Rentan Dropout:
 - Memiliki rata-rata nilai semester rendah (< 12).
 - Telah gagal di beberapa mata kuliah (lebih dari 2).
 - Memiliki status debitur aktif.
 - Masuk kuliah pada usia di atas 22 tahun.
 
-Manfaat Sistem:
+### Manfaat Sistem:
 - Identifikasi Dini: Sistem ini mampu mengklasifikasikan mahasiswa berdasarkan probabilitas dropout dengan cukup akurat.
-
 - Intervensi yang Tepat: Memberikan informasi bagi pihak akademik untuk memprioritaskan perhatian kepada mahasiswa yang memiliki risiko tinggi.
-
 - Rekomendasi Personalisasi: Institusi dapat menyesuaikan strategi intervensi berdasarkan faktor dominan penyebab dropout per mahasiswa.
 
 Dengan demikian, dashboard dan model yang dibangun dapat menjadi alat bantu yang efektif untuk menekan angka dropout, meningkatkan retensi mahasiswa, dan pada akhirnya menjaga reputasi serta efisiensi operasional institusi.
@@ -140,3 +117,8 @@ Dengan demikian, dashboard dan model yang dibangun dapat menjadi alat bantu yang
     - Berikan dukungan untuk persiapan tugas akhir atau skripsi.
     - Sediakan akses ke pelatihan karir dan job fair.
     - Dokumentasikan praktik baik agar bisa diterapkan pada mahasiswa lain.
+
+## kredensial Akun Metabase
+
+- email = root@mail.com
+- password = root123
