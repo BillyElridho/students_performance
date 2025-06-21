@@ -40,6 +40,43 @@ pip install numpy pandas scipy matplotlib seaborn jupyter sqlalchemy scikit-lear
 
 jupyter-notebook .
 ```
+## Business Dashboard
+Dashboard ini dirancang untuk memberikan gambaran menyeluruh tentang persebaran, performa, dan faktor risiko dropout mahasiswa di lingkungan Jaya Jaya Institut. Berikut adalah ringkasan informasi dari masing-masing bagian dashboard:
+
+1. Jumlah Mahasiswa per Status
+Visualisasi berbentuk donut chart ini menunjukkan distribusi status mahasiswa:
+
+Graduate: 49,9%
+Dropout: 32,1%
+Enrolled: 17,9%
+
+Insight: Tingginya persentase mahasiswa dropout (lebih dari sepertiga) menjadi perhatian utama yang mendorong dibuatnya sistem deteksi risiko ini.
+
+2. Distribusi Rata-Rata Nilai Mahasiswa per Status
+Grafik bar chart ini menunjukkan rata-rata nilai semester mahasiswa:
+
+Graduate: 12,67
+Enrolled: 11,12
+Dropout: 6,58
+
+Insight: Terlihat jelas bahwa mahasiswa dropout memiliki performa akademik yang jauh lebih rendah dibandingkan dua kelompok lainnya.
+
+3. Distribusi Dropout Berdasarkan Rentang Usia
+Grafik ini memvisualisasikan jumlah mahasiswa dropout berdasarkan usia saat mendaftar kuliah:
+
+Terbanyak terjadi pada rentang usia 18–20 tahun (542 orang) dan 30+ tahun (385 orang).
+
+Insight: Mahasiswa yang terlalu muda atau sudah cukup dewasa saat masuk kuliah cenderung memiliki risiko dropout lebih tinggi—ini bisa disebabkan oleh kesiapan akademik atau beban tanggung jawab di luar kampus.
+
+4. Tingkat Kelulusan Berdasarkan Jumlah Mata Kuliah Lulus
+Grafik ini menunjukkan rata-rata jumlah mata kuliah yang berhasil dilalui:
+
+Graduate: 12,41
+Enrolled: 8,38
+Dropout: 4,49
+
+Insight: Jumlah mata kuliah yang berhasil dilalui berbanding lurus dengan status keberhasilan mahasiswa. Semakin banyak mata kuliah yang lulus, semakin tinggi kemungkinan mahasiswa untuk menyelesaikan studi.
+
 
 ## Menjalankan Sistem Machine Learning
 Berikut langkah-langkah untuk menjalankan prototipe sistem deteksi risiko dropout mahasiswa yang telah dikembangkan:
@@ -82,13 +119,17 @@ Model memanfaatkan kombinasi fitur akademik (seperti rata-rata nilai semester da
 
 - Average Grade: Mahasiswa dengan nilai rata-rata rendah memiliki risiko dropout yang jauh lebih tinggi. Ini adalah indikator kinerja akademik utama.
 - Curricular Units Failed: Semakin banyak mata kuliah yang gagal, semakin besar kemungkinan mahasiswa tersebut akan dropout.
+- Scholarship Holder: Mahasiswa yang menerima beasiswa cenderung memiliki risiko dropout lebih rendah, mengindikasikan adanya motivasi finansial dan akademik.
+- Debtor: Mahasiswa dengan utang (tunggakan) menunjukkan tingkat dropout yang lebih tinggi.
 - Age at Enrollment: Mahasiswa yang masuk kuliah di usia lebih tua dari rata-rata juga lebih berisiko.
 
 ### Karakteristik Mahasiswa yang Rentan Dropout:
 - Memiliki rata-rata nilai semester rendah (< 12).
 - Telah gagal di beberapa mata kuliah (lebih dari 2).
+- Tidak menerima beasiswa.
+- Tingkat absensi tinggi.
 - Memiliki status debitur aktif.
-- Masuk kuliah pada usia di atas 22 tahun.
+- Umur masuk lebih tua dibanding graduate/enrolled.
 
 ### Manfaat Sistem:
 - Identifikasi Dini: Sistem ini mampu mengklasifikasikan mahasiswa berdasarkan probabilitas dropout dengan cukup akurat.
