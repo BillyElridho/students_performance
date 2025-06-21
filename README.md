@@ -41,42 +41,24 @@ pip install numpy pandas scipy matplotlib seaborn jupyter sqlalchemy scikit-lear
 jupyter-notebook .
 ```
 
-## Business Dashboard
-Dashboard ini dirancang untuk memberikan gambaran menyeluruh tentang persebaran, performa, dan faktor risiko dropout mahasiswa di lingkungan Jaya Jaya Institut. Berikut adalah ringkasan informasi dari masing-masing bagian dashboard:
+# Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Edutech
 
-1. Jumlah Mahasiswa per Status
-Visualisasi berbentuk donut chart ini menunjukkan distribusi status mahasiswa:
+## Business Understanding
 
-Graduate: 49,9%
-Dropout: 32,1%
-Enrolled: 17,9%
+Latar BelakangJaya Jaya Institut mengalami permasalahan jumlah dropout mahasiswa yang cukup tinggi. Hal ini berdampak pada reputasi lembaga, efisiensi anggaran, dan kualitas lulusan.
 
-Insight: Tingginya persentase mahasiswa dropout (lebih dari sepertiga) menjadi perhatian utama yang mendorong dibuatnya sistem deteksi risiko ini.
+### Permasalahan Bisnis
 
-2. Distribusi Rata-Rata Nilai Mahasiswa per Status
-Grafik bar chart ini menunjukkan rata-rata nilai semester mahasiswa:
+Fitur apa yang paling mempengaruhi risiko dropout?
 
-Graduate: 12,67
-Enrolled: 11,12
-Dropout: 6,58
+Siapa mahasiswa yang harus diprioritaskan intervensinya?
 
-Insight: Terlihat jelas bahwa mahasiswa dropout memiliki performa akademik yang jauh lebih rendah dibandingkan dua kelompok lainnya.
+Bagaimana estimasi risiko dropout per mahasiswa?
 
-3. Distribusi Dropout Berdasarkan Rentang Usia
-Grafik ini memvisualisasikan jumlah mahasiswa dropout berdasarkan usia saat mendaftar kuliah:
+### Cakupan Proyek
 
-Terbanyak terjadi pada rentang usia 18–20 tahun (542 orang) dan 30+ tahun (385 orang).
+Membuat model prediksi untuk mendeteksi mahasiswa yang berisiko dropout agar intervensi akademik bisa dilakukan lebih awal.
 
-Insight: Mahasiswa yang terlalu muda atau sudah cukup dewasa saat masuk kuliah cenderung memiliki risiko dropout lebih tinggi—ini bisa disebabkan oleh kesiapan akademik atau beban tanggung jawab di luar kampus.
-
-4. Tingkat Kelulusan Berdasarkan Jumlah Mata Kuliah Lulus
-Grafik ini menunjukkan rata-rata jumlah mata kuliah yang berhasil dilalui:
-
-Graduate: 12,41
-Enrolled: 8,38
-Dropout: 4,49
-
-Insight: Jumlah mata kuliah yang berhasil dilalui berbanding lurus dengan status keberhasilan mahasiswa. Semakin banyak mata kuliah yang lulus, semakin tinggi kemungkinan mahasiswa untuk menyelesaikan studi.
 
 ## Menjalankan Sistem Machine Learning
 Berikut langkah-langkah untuk menjalankan prototipe sistem deteksi risiko dropout mahasiswa yang telah dikembangkan:
@@ -112,12 +94,31 @@ Proyek ini berhasil membangun sistem deteksi risiko dropout mahasiswa menggunaka
 Model memanfaatkan kombinasi fitur akademik (seperti rata-rata nilai semester dan jumlah mata kuliah yang disetujui) serta karakteristik pribadi (seperti usia saat masuk kuliah). Sistem ini memberikan:
 
 - Prediksi status mahasiswa: Dropout / Enrolled / Graduate
-
 - Probabilitas untuk masing-masing label
-
 - Rekomendasi intervensi untuk institusi
 
-Sistem ini dapat membantu kampus dalam mendeteksi mahasiswa berisiko sejak dini dan memberikan perhatian yang tepat sebelum mereka benar-benar dropout.
+Faktor-Faktor yang Berpengaruh terhadap Dropout:
+
+- Average Grade: Mahasiswa dengan nilai rata-rata rendah memiliki risiko dropout yang jauh lebih tinggi. Ini adalah indikator kinerja akademik utama.
+
+- Curricular Units Failed: Semakin banyak mata kuliah yang gagal, semakin besar kemungkinan mahasiswa tersebut akan dropout.
+
+- Age at Enrollment: Mahasiswa yang masuk kuliah di usia lebih tua dari rata-rata juga lebih berisiko.
+
+Karakteristik Mahasiswa yang Rentan Dropout:
+- Memiliki rata-rata nilai semester rendah (< 12).
+- Telah gagal di beberapa mata kuliah (lebih dari 2).
+- Memiliki status debitur aktif.
+- Masuk kuliah pada usia di atas 22 tahun.
+
+Manfaat Sistem:
+- Identifikasi Dini: Sistem ini mampu mengklasifikasikan mahasiswa berdasarkan probabilitas dropout dengan cukup akurat.
+
+- Intervensi yang Tepat: Memberikan informasi bagi pihak akademik untuk memprioritaskan perhatian kepada mahasiswa yang memiliki risiko tinggi.
+
+- Rekomendasi Personalisasi: Institusi dapat menyesuaikan strategi intervensi berdasarkan faktor dominan penyebab dropout per mahasiswa.
+
+Dengan demikian, dashboard dan model yang dibangun dapat menjadi alat bantu yang efektif untuk menekan angka dropout, meningkatkan retensi mahasiswa, dan pada akhirnya menjaga reputasi serta efisiensi operasional institusi.
 
 ### Rekomendasi Action Items
 
